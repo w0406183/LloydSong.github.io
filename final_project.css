@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+html {
+	background: white;
+	height: 100%;
+}
+
+body {
+	background-color: white;
+	border-left: 1px solid rgb(105, 255, 145);
+	border-right: 1px solid rgb(105, 255, 145);
+	height: 100%
+	margin: 0px auto;
+	min-width: 320px
+	max-width: 1200px
+	width: 100%;
+}
+
+/* Flex Layout */
+
+body {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+
+header, footer {
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+}
+
+div#container {
+	-webkit-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+
+div#image {
+	max-width:50%;
+	max-height:50%;
+}
+/* Header Styles */
+
+header {
+	background-color: rgb(183, 252, 201);
+	border-bottom: 1px solid rgb(105, 255, 145);
+	color: black;
+}
+
+header h1 {
+	background: linear-gradient(to left, rgb(105, 255, 145) 30%, white);
+	color: black;
+	font-size: 1.4em;
+	padding: 5px 0px 5px 12px;
+}
+
+
+/* Navigation list styles */
+
+header nav ul li {
+	background-color: rgb(183, 252, 201);
+	font-size: 0.8em;
+	padding: 0px 10px;
+}
+
+header nav ul li a {
+	color: black;
+	display: block;
+	width: 100%;
+}
+
+header nav ul li a:hover {
+	color: white;
+	background-color: rgb(77, 95, 82);
+}
+
+/* Container Styles */
+
+div#container {
+	background: white;
+}
+
+div#image {
+	max-width:50%;
+	max-height:50%;
+}
+/* Main Section styles */
+
+section#main {
+	padding: 10px 20px 0px 20px;
+	font-style: italic;
+}
+
+section#main img {
+	display: block;
+	max-width:50%;
+	max-height:50%;
+}
+
+section#main h2, section#bottom h2 {
+	color: black;
+	background: linear-gradient(to left, rgb(105, 255, 145) 30%, white);
+	font-size: 1.1em;
+	letter-spacing: 6px;
+	padding: 5px 0px 5px 12px;
+}
+
+section#main p, section#bottom p {
+	line-height: 1.4em;
+	margin: 15px;
+
+
+}
+
+footer {
+   color: black;    
+   background: linear-gradient(to left, rgb(105, 255, 145) 30%, white);  
+   font-size: 0.65em;  
+   font-style: normal;
+   height: 30px;
+   line-height: 30px;   
+   text-align: center;
+  
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+
+   section#main {
+      float: left;
+      width: 100%;
+   }
+   
+   header nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   header nav ul li {
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+   }
+
+}
